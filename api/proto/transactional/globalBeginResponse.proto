@@ -14,22 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+syntax = "proto3";
 
-package rm
+package org.apache.seata.protocol.protobuf;
 
-import (
-	"testing"
+import "abstractTransactionResponse.proto";
 
-	"github.com/stretchr/testify/assert"
-)
 
-func TestGetRMRemotingInstance(t *testing.T) {
-	tests := struct {
-		name string
-		want *RMRemoting
-	}{"test1", &RMRemoting{}}
 
-	t.Run(tests.name, func(t *testing.T) {
-		assert.Equalf(t, tests.want, GetRMRemotingInstance(), "GetRMRemotingInstance()")
-	})
+
+option go_package = "github.com/seata/seata-go/pkg/protocol/grpc/transaction;transaction";
+
+message GlobalBeginResponseProto {
+    AbstractTransactionResponseProto abstractTransactionResponse =1;
+    string xid = 2;
+    string extraData = 3;
 }
