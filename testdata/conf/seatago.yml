@@ -141,7 +141,7 @@ seata:
       server-addr: "http://localhost:2379"
     raft:
       metadata-max-age-ms: 30000
-      server-ddr:
+      server-addr:
       token-validity-in-milliseconds: 1740000
   log:
     exception-rate: 100

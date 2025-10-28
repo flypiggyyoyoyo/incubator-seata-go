@@ -100,7 +100,7 @@ func (cfg *Etcd3Config) RegisterFlagsWithPrefix(prefix string, f *flag.FlagSet) 
 
 type RaftConfig struct {
 	MetadataMaxAgeMs            int64  `yaml:"metadata-max-age-ms" json:"metadata-max-age-ms" koanf:"metadata-max-age-ms"`
-	ServerAddr                  string `yaml:"serverAddr" json:"server-addr" koanf:"server-addr"`
+	ServerAddr                  string `yaml:"server-addr" json:"server-addr" koanf:"server-addr"`
 	TokenValidityInMilliseconds int64  `yaml:"token-validity-in-milliseconds" json:"token-validity-in-milliseconds" koanf:"token-validity-in-milliseconds"`
 }
 
